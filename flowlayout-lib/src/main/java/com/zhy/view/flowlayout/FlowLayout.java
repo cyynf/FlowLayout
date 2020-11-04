@@ -74,7 +74,7 @@ public class FlowLayout extends ViewGroup {
             int childHeight = child.getMeasuredHeight() + lp.topMargin
                     + lp.bottomMargin;
             if (lineWidth + childWidth > sizeWidth - getPaddingLeft() - getPaddingRight()) {
-                if (line >= mMaxLine) break;
+                if (++line >= mMaxLine) break;
                 width = Math.max(width, lineWidth);
                 lineWidth = childWidth;
                 height += lineHeight;
